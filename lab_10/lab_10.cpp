@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <ctime>
 using namespace std;
 
@@ -39,7 +39,7 @@ void find_and_delete(char**& a, int& size)
 {
 	int i;
 	int k;
-	cout << "Введите число k";
+	cout << "Введите число k: ";
 	cin >> k;
 	for (int i = 0; i < size-k; i++)
 	{
@@ -72,6 +72,9 @@ int main()
 	cout << "\nГенерация массива из " << n << " случайно сгенерированных строк...";
 	arr = make_array(n);
 	cout << "\nПолученный массив: \n";
+	print_array(arr, n);
+	cout << "\n";
+	cout << "\nМассив, после удаления одинаковых строк: \n";
 	print_array(arr, n);
 	cout << "\n";
 	cout << "\nУдаление k строк из массива...\n";
