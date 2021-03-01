@@ -10,12 +10,12 @@ List* make(int size)
 {
 	if (size == 0)
 	{
-		cout << "Ñïèñîê íå ìîæåò áûòü ñîçäàí" << endl;
+		cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ ÑÐ¾Ð·Ð´Ð°Ð½" << endl;
 		return 0;
 	}
-	List* first, * p;
+	List* first, *p;
 	first = NULL;
-	cout << "Ââåäèòå 1 ýëåìåíò: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 1 ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: " << endl;
 	p = new List;
 	cin >> p->data;
 	first = p;
@@ -24,7 +24,7 @@ List* make(int size)
 		List* h = new List;
 		p->next = h;
 		p = p->next;
-		cout << "Ââåäèòå " << i << "ýëåìåíò: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i << "ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
 		cin >> p->data;
 		p->next = NULL;
 	}
@@ -34,7 +34,7 @@ List* make(int size)
 void print(List* first)
 {
 	if (first == NULL)
-		cout << "Ñïèñîê ïóñòîé" << endl;
+		cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚Ð¾Ð¹" << endl;
 	else
 	{
 		List* p = first;
@@ -71,14 +71,14 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	int size;
-	cout << "Ââåäèòå ðàçìåð ñïèñêà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÐ¿Ð¸ÑÐºÐ°: ";
 	cin >> size;
 	List* list = make(size);
-	cout << "Âàø ñïèñîê: " << endl;
+	cout << "Ð’Ð°Ñˆ ÑÐ¿Ð¸ÑÐ¾Ðº: " << endl;
 	print(list);
 	add(list);
-	cout << "Âàø ñïèñîê ïîñëå äîáàâëåíèÿ: " << endl;
+	cout << "Ð’Ð°Ñˆ ÑÐ¿Ð¸ÑÐ¾Ðº Ð¿Ð¾ÑÐ»Ðµ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: " << endl;
 	print(list);
 
 	return 0;
-}
+} 
