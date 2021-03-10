@@ -19,23 +19,23 @@ int main()
 {
     setlocale(LC_ALL, "rus");
 
-    cout << "Введите кол-во строк: ";
+    cout << "Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚СЂРѕРє: ";
     cin >> n;
 
-    // Делаем записи в файл
+    // Р”РµР»Р°РµРј Р·Р°РїРёСЃРё РІ С„Р°Р№Р»
     loadFile("F1.txt");
 
-    // Открываем файл
+    // РћС‚РєСЂС‹РІР°РµРј С„Р°Р№Р»
     printFile("F1.txt");
 
-    // Перемещение строк из одного файла в другой
+    // РџРµСЂРµРјРµС‰РµРЅРёРµ СЃС‚СЂРѕРє РёР· РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р° РІ РґСЂСѓРіРѕР№
     moveString("F1.txt", "F2.txt"); 
 
-    n -= g; // Подсчитываем, сколько мы должны вывести строчек
+    n -= g; // РџРѕРґСЃС‡РёС‚С‹РІР°РµРј, СЃРєРѕР»СЊРєРѕ РјС‹ РґРѕР»Р¶РЅС‹ РІС‹РІРµСЃС‚Рё СЃС‚СЂРѕС‡РµРє
     printFile("F2.txt");
 
-    getLastLine("F2.txt", str); // Получаем последнюю строку
-    cout << "Кол-во гласных в последней строке: " << countVowels(str) << endl;
+    getLastLine("F2.txt", str); // РџРѕР»СѓС‡Р°РµРј РїРѕСЃР»РµРґРЅСЋСЋ СЃС‚СЂРѕРєСѓ
+    cout << "РљРѕР»-РІРѕ РіР»Р°СЃРЅС‹С… РІ РїРѕСЃР»РµРґРЅРµР№ СЃС‚СЂРѕРєРµ: " << countVowels(str) << endl;
     return 0;
 }
 
@@ -45,20 +45,20 @@ void loadFile(string filename) {
     ofstream f1(filename);
     if (!f1.is_open())
     {
-        // Если не открывается
-        cout << "Файл не открыт" << endl;
+        // Р•СЃР»Рё РЅРµ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ
+        cout << "Р¤Р°Р№Р» РЅРµ РѕС‚РєСЂС‹С‚" << endl;
         exit(EXIT_FAILURE);
     }
 
-    // Записываем строки
+    // Р—Р°РїРёСЃС‹РІР°РµРј СЃС‚СЂРѕРєРё
     for (int i = 0; i < n; i++)
     {
-        // Получаем строчку
+        // РџРѕР»СѓС‡Р°РµРј СЃС‚СЂРѕС‡РєСѓ
         getline(cin, str);
         f1 << str << "\n";
     }
 
-    // Закрываем файл
+    // Р—Р°РєСЂС‹РІР°РµРј С„Р°Р№Р»
     f1.close();
 }
 
@@ -66,29 +66,29 @@ void printFile(string filename) {
     ifstream file(filename);
     if (!file.is_open())
     {
-        // Если не открывается
-        cout << "Файл не открыт" << endl;
+        // Р•СЃР»Рё РЅРµ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ
+        cout << "Р¤Р°Р№Р» РЅРµ РѕС‚РєСЂС‹С‚" << endl;
         exit(EXIT_FAILURE);
     }
 
-    // Выводим содержаения
-    cout << "Содержание файла " << filename << endl;
+    // Р’С‹РІРѕРґРёРј СЃРѕРґРµСЂР¶Р°РµРЅРёСЏ
+    cout << "РЎРѕРґРµСЂР¶Р°РЅРёРµ С„Р°Р№Р»Р° " << filename << endl;
     for (int i = 0; i < n; i++)
     {
-        // Из файла в строчку
+        // РР· С„Р°Р№Р»Р° РІ СЃС‚СЂРѕС‡РєСѓ
         getline(file, str);
         cout << str << endl;
     }
-    // Выходим из файла
+    // Р’С‹С…РѕРґРёРј РёР· С„Р°Р№Р»Р°
     file.close();
 }
 
-// Получаем последнюю строчку
+// РџРѕР»СѓС‡Р°РµРј РїРѕСЃР»РµРґРЅСЋСЋ СЃС‚СЂРѕС‡РєСѓ
 void getLastLine(string filename, string& str) {
     ifstream file(filename);
     if (!file.is_open())
     {
-        cout << "Файлы не открыт" << endl;
+        cout << "Р¤Р°Р№Р»С‹ РЅРµ РѕС‚РєСЂС‹С‚" << endl;
         exit(EXIT_FAILURE);
     }
 
@@ -98,7 +98,7 @@ void getLastLine(string filename, string& str) {
     file.close();
 }
 
-// Количество гласных
+// РљРѕР»РёС‡РµСЃС‚РІРѕ РіР»Р°СЃРЅС‹С…
 int countVowels(string str) {
     int count = 0;
     for (auto c : str)
@@ -112,19 +112,19 @@ int countVowels(string str) {
 }
 
 void moveString(string filename_in, string filename_out) {
-    // Открываем файлы F1 и F2
+    // РћС‚РєСЂС‹РІР°РµРј С„Р°Р№Р»С‹ F1 Рё F2
     ifstream f(filename_in);
     ofstream f2(filename_out);
     if (!f.is_open() && !f2.is_open())
     {
-        // Проверяем, вдруг файлы не открываются
-        cout << "Файлы не открыт" << endl;
+        // РџСЂРѕРІРµСЂСЏРµРј, РІРґСЂСѓРі С„Р°Р№Р»С‹ РЅРµ РѕС‚РєСЂС‹РІР°СЋС‚СЃСЏ
+        cout << "Р¤Р°Р№Р»С‹ РЅРµ РѕС‚РєСЂС‹С‚" << endl;
         exit(EXIT_FAILURE);
     }
 
     for (int i = 0; i < n; i++)
     {
-        getline(f, str); // Получили строчку из файла
+        getline(f, str); // РџРѕР»СѓС‡РёР»Рё СЃС‚СЂРѕС‡РєСѓ РёР· С„Р°Р№Р»Р°
 
         string s;
         string arr[50];
@@ -144,7 +144,7 @@ void moveString(string filename_in, string filename_out) {
                 }
     }
 
-    // Закрываем файлы
+    // Р—Р°РєСЂС‹РІР°РµРј С„Р°Р№Р»С‹
     f.close();
     f2.close();
 }
