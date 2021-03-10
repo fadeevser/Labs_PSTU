@@ -5,12 +5,12 @@ using namespace std;
 
 struct items
 {
-	string special;   //специальность
-	float number;  //количество студентов
+	string special;   //СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚СЊ
+	float number;  //РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ
 };
 
 void ShellSort(items* a, int n)
-{//Сортировка Шелла
+{//РЎРѕСЂС‚РёСЂРѕРІРєР° РЁРµР»Р»Р°
 	int b = n / 2;
 	while (b > 0)
 	{
@@ -38,7 +38,7 @@ void ShellSort(items* a, int n)
 }
 
 void HoaraSort(items* arr, int left, int right)
-{//Сортировка Хоара
+{//РЎРѕСЂС‚РёСЂРѕРІРєР° РҐРѕР°СЂР°
 	float d;
 	string f;
 	int i = left;
@@ -76,36 +76,36 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	int n;
-	cout << "Введите количество направлений: ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РЅР°РїСЂР°РІР»РµРЅРёР№: ";
 	cin >> n;
-	cout << "Введите все специальности и кол-во студентов: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РІСЃРµ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё Рё РєРѕР»-РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ: " << endl;
 	cin.ignore();
 	items* st = new items[n];
 	for (int i = 0; i < n; i++)
 	{
-		cout << "Название специальности: ";
+		cout << "РќР°Р·РІР°РЅРёРµ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё: ";
 		cout << " ";
 		getline(cin, st[i].special);
-		cout << " Количество студентов: ";
+		cout << " РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ: ";
 		cin >> st[i].number;
 		cin.ignore();
 	}
 	int a;
-	cout << endl << "Операции:" << endl;
-	cout << "1 - сортировка Шелла " << endl;
-	cout << "2 - сортировка Хоара" << endl;
-	cout << "Введите операцию: ";
+	cout << endl << "РћРїРµСЂР°С†РёРё:" << endl;
+	cout << "1 - СЃРѕСЂС‚РёСЂРѕРІРєР° РЁРµР»Р»Р° " << endl;
+	cout << "2 - СЃРѕСЂС‚РёСЂРѕРІРєР° РҐРѕР°СЂР°" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РѕРїРµСЂР°С†РёСЋ: ";
 	cin >> a;
 	switch (a)
 	{
 	case 1: ShellSort(st, n); break;
 	case 2: HoaraSort(st, 0, n - 1);; break;
-	default: cout << "ОШИБКА!!! Неизвестная операция. Сортировка не выполнена." << endl;
+	default: cout << "РћРЁРР‘РљРђ!!! РќРµРёР·РІРµСЃС‚РЅР°СЏ РѕРїРµСЂР°С†РёСЏ. РЎРѕСЂС‚РёСЂРѕРІРєР° РЅРµ РІС‹РїРѕР»РЅРµРЅР°." << endl;
 	}
-	cout << endl << "После сортировки: " << endl;
+	cout << endl << "РџРѕСЃР»Рµ СЃРѕСЂС‚РёСЂРѕРІРєРё: " << endl;
 	for (int i = 0; i < n; i++)
 	{
-		cout << "Название специальности: " << st[i].special << endl;
-		cout << " Количество студентов: " << st[i].number << endl;
+		cout << "РќР°Р·РІР°РЅРёРµ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё: " << st[i].special << endl;
+		cout << " РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ: " << st[i].number << endl;
 	}
 }
