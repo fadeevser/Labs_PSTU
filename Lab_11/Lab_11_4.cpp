@@ -10,7 +10,7 @@ struct List {
 List* make(int n, List*& first, List*& last) {
     if (n == 0)
     {
-        cout << "Ïóñòîé";
+        cout << "ÐŸÑƒÑÑ‚Ð¾Ð¹";
         return 0;
     }
 
@@ -24,7 +24,7 @@ List* make(int n, List*& first, List*& last) {
     for (int i = 2; i <= n; i++)
     {
         List* h = new List;
-        cout << "Äîáàâüòå ýëåìåíò: ";
+        cout << "Ð”Ð¾Ð±Ð°Ð²ÑŒÑ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚: ";
         cin >> a;
         h->data = a;
         h->next = p;
@@ -89,7 +89,7 @@ List* push(int n, List*& last)
 int main() 
 {
     setlocale(LC_ALL, "rus");
-    cout << "Ðàçìåð î÷åðåäè: " << endl;
+    cout << "Ð Ð°Ð·Ð¼ÐµÑ€ Ð¾Ñ‡ÐµÑ€ÐµÐ´Ð¸: " << endl;
     int n;
     cin >> n;
     List* first, * last;
@@ -113,7 +113,7 @@ int main()
     {
         push(mas[i], last);
     }
-    cout << "Íîâàÿ î÷åðåäü: " << endl;
+    cout << "ÐÐ¾Ð²Ð°Ñ Ð¾Ñ‡ÐµÑ€ÐµÐ´ÑŒ: " << endl;
     print(last);
 
 
