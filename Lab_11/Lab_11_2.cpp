@@ -8,13 +8,13 @@ struct List {
 
 List* make(int size) {
 	if (size == 0) {
-		cout << "Íåëüçÿ ñîçäàòü ïóñòîé ñïèñîê" << endl;
+		cout << "ÐÐµÐ»ÑŒÐ·Ñ ÑÐ¾Ð·Ð´Ð°Ñ‚ÑŒ Ð¿ÑƒÑÑ‚Ð¾Ð¹ ÑÐ¿Ð¸ÑÐ¾Ðº" << endl;
 		return 0;
 	}
 	List* first, * p;
 	first = NULL;
 	p = new List;
-	cout << "Ââåäèòå ïåðâûé ýëåìåíò:";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚:";
 	cin >> p->data;
 	first = p;
 	p->next = NULL;
@@ -24,7 +24,7 @@ List* make(int size) {
 		List* q = p;
 		p->next = h;
 		p = p->next;
-		cout << "Ââåäèòå " << i << " ýëåìåíò:";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚:";
 		cin >> p->data;
 		p->next = NULL;
 		p->prev = q;
@@ -46,7 +46,7 @@ void del(List*& first) {
 void print(List* first) {
 
 	if (first == NULL) {
-		cout << "Ïóñòîé ñïèñîê" << endl;
+		cout << "ÐŸÑƒÑÑ‚Ð¾Ð¹ ÑÐ¿Ð¸ÑÐ¾Ðº" << endl;
 	}
 	else {
 		cout << "|";
