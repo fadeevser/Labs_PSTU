@@ -13,7 +13,7 @@ Stack* make(int n)
 {
 	if (n <= 0)
 	{
-		cout << "Ñòåê íå ìîæåò áûòü ñîçäàí";
+		cout << "Ð¡Ñ‚ÐµÐº Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ ÑÐ¾Ð·Ð´Ð°Ð½";
 		return NULL;
 	}
 	Stack* top, * p;
@@ -36,7 +36,7 @@ Stack* make(int n)
 
 void print(Stack* top)
 {
-	if (top == NULL) cout << "Ñòåê ïóñò" << endl;
+	if (top == NULL) cout << "Ð¡Ñ‚ÐµÐº Ð¿ÑƒÑÑ‚" << endl;
 	else {
 		Stack* p = top;
 		while (p != NULL)
@@ -71,17 +71,17 @@ int main()
 {
 	setlocale(LC_ALL, "Rus");
 	int n;
-	cout << "Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ â ñòåêå: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð² ÑÑ‚ÐµÐºÐµ: ";
 	cin >> n;
 
 	Stack* st = make(n);
 
-	cout << "Âàø ñòåê: ";
+	cout << "Ð’Ð°Ñˆ ÑÑ‚ÐµÐº: ";
 	print(st);
 
 	add(st);
 
-	cout << "Ñòåê ïîñëå äîáàâëåíèÿ: ";
+	cout << "Ð¡Ñ‚ÐµÐº Ð¿Ð¾ÑÐ»Ðµ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: ";
 	print(st);
 
 	return 0;
