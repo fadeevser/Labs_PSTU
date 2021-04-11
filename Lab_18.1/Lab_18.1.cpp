@@ -48,8 +48,8 @@ int main()
 		cout << "p_mas[" << i << "].coast(" << p_mas[i].first << ", " << p_mas[i].second << ") = " << p_mas[i].coast() << endl;
 	}
 	int y; double z;
-	cout << "Ââåäèòå ïåðâûé ýëåìåíò? "; cin >> y;
-	cout << "Ââåäèòå âòîðîé ýëåìåíò? "; cin >> z;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚? "; cin >> y;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ‚Ð¾Ñ€Ð¾Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚? "; cin >> z;
 	phone_call f = make_phone_call(y, z);
 	f.show();
 }
