@@ -9,13 +9,13 @@ void phone_call::init(int f, double s) {
 }
 
 void phone_call::read() {
-	cout << "Ïåðâûé ýëåìåíò? "; cin >> first;
-	cout << "Âòîðîé ýëåìåíò? "; cin >> second;
+	cout << "ÐŸÐµÑ€Ð²Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚? "; cin >> first;
+	cout << "Ð’Ñ‚Ð¾Ñ€Ð¾Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚? "; cin >> second;
 }
 
 void phone_call::show() {
-	cout << "Ïåðâûé = " << first << endl;
-	cout << "Âòîðîé = " << second << endl;
+	cout << "ÐŸÐµÑ€Ð²Ñ‹Ð¹ = " << first << endl;
+	cout << "Ð’Ñ‚Ð¾Ñ€Ð¾Ð¹ = " << second << endl;
 }
 
 double phone_call::coast() {
