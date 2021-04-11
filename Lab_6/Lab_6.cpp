@@ -1,4 +1,4 @@
-#include <iostream> //done
+#include <iostream> 
 using namespace std;
 int a;
 int f(int n)
@@ -15,7 +15,7 @@ int f(int n)
 int main()
 {
     setlocale(LC_ALL, "rus");
-    cout << "Ââåäèòå ÷èñëî äëÿ ïîèñêà åãî ýëåìåíòîâ: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ° ÐµÐ³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: ";
     cout << endl;
     cin >> a;
     cout << f(a);
