@@ -6,11 +6,8 @@
 using namespace std;
 
 int x;
-
 int len = 6;
-
 int result[6] = { 1000, 1000, 1000, 1000, 1000, 1000 };
-
 bool flag[6] = { false, false, false, false, false, false };
 
 vector <vector<int>> matrix = { {0 ,0 ,11, 26,0 ,12 },
@@ -28,7 +25,7 @@ int main()
 {
     setlocale(LC_ALL, "RUS");
     queue <int> QUEUE;
-    cout << "Ââåäèòå íà÷àëüíóþ âåðøèíó (1<=x<=" << len << ")\n";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½ÑƒÑŽ Ð²ÐµÑ€ÑˆÐ¸Ð½Ñƒ (1<=x<=" << len << ")\n";
     cin >> x;
     x--;
     result[x] = 0;
@@ -40,7 +37,6 @@ int main()
         for (int i = 0; i < len; i++)
             if (matrix[x][i] != 0 && !flag[i])
                 vec.push_back(i);
-
         if (vec.size() == 0)
         {
             flag[x] = true;
@@ -60,11 +56,11 @@ int main()
         QUEUE.pop();
         if (QUEUE.size() == 0) break;
     }
-    cout << "Êðàò÷àéøèå ïóòè:\n";
+    cout << "ÐšÑ€Ð°Ñ‚Ñ‡Ð°Ð¹ÑˆÐ¸Ðµ Ð¿ÑƒÑ‚Ð¸:\n";
     for (int i = 0; i < len; i++)
     {
         if (result[i] == 1000)
-            cout << i + 1 << " - íåäîñòóïåí\n";
+            cout << i + 1 << " - Ð½ÐµÐ´Ð¾ÑÑ‚ÑƒÐ¿ÐµÐ½\n";
         else
             cout << i + 1 << " - " << result[i] << endl;
     }
